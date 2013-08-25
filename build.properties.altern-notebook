@@ -1,0 +1,5 @@
+deploy.path.local = D:\\xampp\\htdocs\\altern.kiev.ua
+deploy.path.remote = /http/deploy
+deploy.remote.server = ftp.altern-kiev-ua.1gb.ua
+deploy.remote.login = w_altern-kiev-ua_1db67010
+deploy.remote.pass = 4044439a

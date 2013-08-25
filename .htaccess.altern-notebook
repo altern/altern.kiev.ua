@@ -1,0 +1,11 @@
+RewriteEngine On
+Options +FollowSymlinks
+RewriteCond %{ENV:REDIRECT_MYFLAG} ^$
+RewriteCond %{HTTP_HOST} ^scm\.altern\.kiev\.ua$
+RewriteRule ^(.+) %{HTTP_HOST}$1 [E=MYFLAG:1]
+RewriteRule ^scm\.altern\.kiev\.ua(.*) /scm%{REQUEST_URI} [L]
+
+RewriteCond %{HTTP_HOST} ^trac\.altern\.kiev\.ua$
+RewriteRule ^(.+) %{HTTP_HOST}$1 [E=MYFLAG:1]
+RewriteRule ^trac\.altern\.kiev\.ua(.*) /trac%{REQUEST_URI} [L]
+

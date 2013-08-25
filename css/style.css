@@ -1,0 +1,138 @@
+#main ul li /*, #accordion ul li*/ {
+    list-style: none;
+    cursor: pointer;
+}
+#main ul li a{
+    display: block;
+    text-decoration: none;
+    width: 100%;
+}
+#main ul li:hover {
+    background-color: #ddd;
+}
+#logos img {
+    margin-left: 10px
+}
+
+/*#accordion a {
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    border: 1px solid gray;
+}*/
+
+.basic  {
+    width: 100%;
+    font-family: Verdana, Helvetica, sans-serif;
+    border: 1px solid gray;
+}
+.basic div {
+    background-color: #eee;
+}
+
+/*.basic p {
+    margin-bottom : 10px;
+    border: none;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 10px;
+    margin: 0px;
+    padding: 10px;
+} */
+.basic h2 > a {
+    cursor:pointer;
+    display:block;
+    padding:10px;
+    margin-top: 0;
+    text-decoration: none;
+    color: #4C676F;
+    background-color: #A7C1DF;
+    border-top: 1px solid #FFFFFF;
+    border-bottom: 1px solid #999;
+    text-transform: uppercase;
+    text-align: center;
+}
+.basic h2 > a:hover {
+    background-color: #C2D8EF;
+}
+.basic h2 > a.selected {
+    color: white;
+    background-color: #78A1AF;
+}
+.accordion_block {
+    height: 480px;
+}
+.accordion_block p {
+    /*text-align: center; padding: 200px 0; font-size: 1.2em*/
+    height: 0px;
+}
+#portfolio h3 {
+    padding-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+#portfolio div {
+    padding: 20px;
+    height: 428px;
+    overflow-y: scroll;
+}
+#portfolio div ol li {
+    margin-left: 10px;
+}
+#portfolio div ol li a:hover{
+    text-decoration: underline;
+    color: inherit;
+    color: #4C676F;
+}
+#portfolio div ol li a {
+    padding-right: 10px;
+}
+#portfolio table {
+    margin-top: 10px;
+    border: 1px solid grey;
+}
+#portfolio table h4 {
+    padding: 0;
+    color: white;
+    font-weight: bold;
+}
+#portfolio table thead {
+    background-color: #B6D3AF;
+    font-weight: bold;
+    border: 1px solid grey;
+    text-align: center;
+}
+#portfolio table thead th.caption {
+    background-color: #9DB598;
+}
+#portfolio table thead th {
+    border-bottom: 1px solid grey;
+}
+#portfolio table tbody {
+    font-size: 0.8em;
+    border: 1px solid grey;
+    background-color: #E2EDE1;
+}
+#portfolio table tbody tr:hover td {
+    background-color: #D1DDD0;
+    cursor: pointer;
+}
+#portfolio table tbody td {
+    border-bottom: 1px solid grey;
+}
+table#sessions {
+    width: 100%;
+    font-size: 1.2em;
+}
+table#sessions tr:hover td {
+    text-decoration: underline;
+}
+table#sessions td image{
+    float: leftr
+}
+#main_section {
+    padding: 10px;
+}
+#main_section a {
+    text-decoration: underline
+}

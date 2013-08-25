@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<project name="altern.kiev.ua" default="deploy-local">
+	<property file="build.properties"/>
+	<property file="config.ini"/>
+	<target name="deploy-local">
+		<echo message="Deploying version ${version}" />
+		<delete dir="${deploy.path.local}" />
+		<copy todir="${deploy.path.local}">
+			<fileset dir="." includes="**/*" >
+				<exclude name=".filemanager/**" />
+				<exclude name=".git/**" />
+				<exclude name="scm/**" />
+				<exclude name="trac/**" />
+				<exclude name=".gitignore" />
+				<exclude name="build.*" />
+				<exclude name="*.bat" />
+			</fileset>
+		</copy>
+	</target>
+	<target name="deploy-remote">
+		<echo message="Deploying version ${version}" />
+		<ftp action="del"
+			 server="${deploy.remote.server}" 
+			 userid="${deploy.remote.login}"
+			 password="${deploy.remote.pass}">
+			<fileset>
+			  <include name="${deploy.path.remote}/${version}"/>
+			</fileset>
+		</ftp>
+		<ftp action="mkdir"
+			 server="${deploy.remote.server}" 
+			 userid="${deploy.remote.login}"
+			 password="${deploy.remote.pass}"
+			 remotedir="${deploy.path.remote}/${version}">
+		</ftp>
+		<ftp server="${deploy.remote.server}" 
+			 userid="${deploy.remote.login}"
+			 password="${deploy.remote.pass}"
+			 remotedir="${deploy.path.remote}/${version}"
+			 passive="yes">
+			 <fileset dir="." includes="**/*" >
+				<exclude name=".filemanager/**" />
+				<exclude name=".git/**" />
+				<exclude name="scm/**" />
+				<exclude name="trac/**" />
+				<exclude name=".gitignore" />
+				<exclude name="build.*" />
+				<exclude name="*.bat" />
+			</fileset>
+		</ftp>
+	</target>
+</project>
